@@ -1,6 +1,8 @@
 
 package com.mycompany.celsiusfarenheit;
 
+import java.util.InputMismatchException;
+
 
 public class CelsiusFarenheit {
 
@@ -9,6 +11,7 @@ public class CelsiusFarenheit {
         CelsiusFarenheitClass celsiusfarenheitclass = new CelsiusFarenheitClass();
         celsiusfarenheitclass.calcular();
         
-        
+         
+       
     }
 }
