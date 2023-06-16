@@ -11,37 +11,47 @@ import java.util.Scanner;
  *
  * @author JUAN MERCEDES
  */
-public class CelsiusFarenheitClass implements CelsiusFarenheitInterf{
+public class Menu extends CalculadoraBase{
 
         static Scanner entrada = new Scanner(System.in);
-    public void calcular() {
+    public void menu() {
         
         int opcion =0;
-        double celsius;
+        double celsius=0;
         double total;
         
      
         
         do{
             
-        System.out.println("Menu de conversion");
-        System.out.println("1.-Conversion de Celsius a Farenheint");
-        System.out.println("2.-Salir del programa");
+            System.out.println("Menu de conversion");
+            System.out.println("1.-Conversion de Celsius a Farenheint");
+            System.out.println("2.-Conversion de Celsius a Kelvin ");
+            System.out.println("3.-Conversion de Celsius a Rankine");
+            System.out.println("4.-Conversion de Farenheint a Celsius ");
+            System.out.println("5.-Conversion de Farenheint a Kelvin ");
+            System.out.println("6.-Conversion de Farenheint a Rankine ");
+            System.out.println("2.-Salir del programa");
         
         opcion = entradavalida(entrada);
         
      
         switch(opcion){
             case 1:
-                System.out.print("Digite los Grados Celsius para convertir a Farenheint ");
+              System.out.println("Digite los Grados Celsius para convertir a Farenheint ");
                 celsius = entradavalida(entrada);
-                total = celsius *1.8 +32;
-                
+                total = calculoCF(celsius,1.8,32);
                 System.out.println("La conversion es: "+total+"ºF");
                 System.out.println("");
                 break;
-                
             case 2:
+                System.out.println("Digite los Grados Celsius para convertir a Kelvin ");
+                celsius = entradavalida(entrada);
+                total = calculoCK(celsius,273.15);
+                System.out.println("La conversion es: "+total+"K");
+                System.out.println("");
+                break;
+            case 3:
                 System.out.println("Estas saliendo del programa");
                 break;
         }

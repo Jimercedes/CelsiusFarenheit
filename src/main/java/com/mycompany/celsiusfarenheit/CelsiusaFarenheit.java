@@ -8,6 +8,9 @@ package com.mycompany.celsiusfarenheit;
  *
  * @author JUAN MERCEDES
  */
-class NumberFormaException {
+public class CelsiusaFarenheit extends CalculadoraBase{
+
     
+    
+   
 }

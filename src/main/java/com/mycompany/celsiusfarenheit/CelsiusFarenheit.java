@@ -8,8 +8,8 @@ public class CelsiusFarenheit {
 
     public static void main(String[] args) {
         
-        CelsiusFarenheitClass celsiusfarenheitclass = new CelsiusFarenheitClass();
-        celsiusfarenheitclass.calcular();
+        Menu celsiusfarenheitclass = new Menu();
+        celsiusfarenheitclass.menu();
         
          
        

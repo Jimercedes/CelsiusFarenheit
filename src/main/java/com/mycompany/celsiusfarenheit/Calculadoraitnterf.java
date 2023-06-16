@@ -2,7 +2,7 @@
 package com.mycompany.celsiusfarenheit;
 
 
-public interface CelsiusFarenheitInterf {
+public interface Calculadoraitnterf {
     
     public void calcular();
    
