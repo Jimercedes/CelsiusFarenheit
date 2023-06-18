@@ -10,28 +10,20 @@ package com.mycompany.celsiusfarenheit;
  */
 public class CalculadoraBase {
     
-    public double calculoCF(double a ,double b,double c){
-        double formula = a* b + c ; 
-                
-        return formula;   
-      
-        
-    }
-    
-    public double calculoCK(double a, double b){
-        double formula = a + b;
-        
-        return formula;
-    }
-    
-    public int multiplicar(int a, int b){
-        int multiplica = a * b;
-        
+    public double sumar(double a ,double b){
+        double suma = a + b ; 
+        return suma;             
+    }   
+    public double multiplicar(double a, double b){
+        double multiplica = a * b;        
         return multiplica;
     }
-    public int dividir(int a, int b){
-        int divide = a/b;
-        
+    public double dividir(double a, double b){
+        double divide = a/b;        
         return divide;
+    }
+    public double restar(double a, double b){
+        return a - b;
+        
     }
 }

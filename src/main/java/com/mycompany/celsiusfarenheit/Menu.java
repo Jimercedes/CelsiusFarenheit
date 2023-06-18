@@ -19,6 +19,7 @@ public class Menu extends CalculadoraBase{
         int opcion =0;
         double celsius=0;
         double total;
+        double fahrenheit=0;
         
      
         
@@ -31,7 +32,7 @@ public class Menu extends CalculadoraBase{
             System.out.println("4.-Conversion de Farenheint a Celsius ");
             System.out.println("5.-Conversion de Farenheint a Kelvin ");
             System.out.println("6.-Conversion de Farenheint a Rankine ");
-            System.out.println("2.-Salir del programa");
+            System.out.println("7.-Salir del programa\n");
         
         opcion = entradavalida(entrada);
         
@@ -40,18 +41,46 @@ public class Menu extends CalculadoraBase{
             case 1:
               System.out.println("Digite los Grados Celsius para convertir a Farenheint ");
                 celsius = entradavalida(entrada);
-                total = calculoCF(celsius,1.8,32);
+                total = sumar(celsius,1.8)+32;
                 System.out.println("La conversion es: "+total+"ºF");
                 System.out.println("");
                 break;
             case 2:
                 System.out.println("Digite los Grados Celsius para convertir a Kelvin ");
                 celsius = entradavalida(entrada);
-                total = calculoCK(celsius,273.15);
+                total = sumar(celsius,273.15);
                 System.out.println("La conversion es: "+total+"K");
                 System.out.println("");
                 break;
             case 3:
+                System.out.println("Digite los Grados Celsius para convertir a Rankinee");
+                celsius = entradavalida(entrada);
+                total = multiplicar(celsius, 1.8 )+491.67;
+                System.out.println("La conversion es: "+total+"°R\n");
+                break;
+                
+            case 4:
+                System.out.println("Digite los Grados Fahrenheit para convertir a Celsius");
+                fahrenheit = entradavalida(entrada);
+                total = restar(fahrenheit,32)*5/9;
+                System.out.println("La conversion es: "+total+"°C\n");
+                break;
+            
+            case 5:
+                System.out.println("Digite los Grados Fahrenheit para convertir a Kelvin");
+                fahrenheit = entradavalida(entrada);
+                total = restar(fahrenheit,32)*5/9 + 273.15;
+                System.out.println("La conversion es: "+total+"K\n");
+                break;
+                
+            case 6:
+                System.out.println("Digite los Grados Fahrenheit para convertir a Rankine");
+                fahrenheit = entradavalida(entrada);
+                total = sumar(fahrenheit,459.67);
+                System.out.println("La conversion es: "+total+"°R\n");
+                break;
+                
+            case 7:
                 System.out.println("Estas saliendo del programa");
                 break;
         }
@@ -61,7 +90,7 @@ public class Menu extends CalculadoraBase{
         
         
         
-    }while(opcion !=2);
+    }while(opcion !=7);
 
            
     }
@@ -77,7 +106,7 @@ public class Menu extends CalculadoraBase{
                 entrada2 = entrada.nextInt();
                 entradaValida = true;
             }catch (InputMismatchException e){
-                System.out.println("Error - Intentalo otra vez mmg ");
+                System.out.println("Error - Digite una opcion valida del 1-7 ");
                 entrada.next();
             }
         }
